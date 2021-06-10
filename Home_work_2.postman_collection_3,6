@@ -1,0 +1,148 @@
+{
+	"info": {
+		"_postman_id": "5fedee6b-8922-4861-a87d-8b54975a67b4",
+		"name": "Home_work_2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "endpoint_3",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/object_info_3?age=15&salary=1900&name=Petro",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"object_info_3"
+					],
+					"query": [
+						{
+							"key": "age",
+							"value": "15"
+						},
+						{
+							"key": "salary",
+							"value": "1900"
+						},
+						{
+							"key": "name",
+							"value": "Petro"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+				    "age": "15",
+				    "family": {
+				        "children": [
+				            [
+				                "Alex",
+				                24
+				            ],
+				            [
+				                "Kate",
+				                12
+				            ]
+				        ],
+				        "pets": {
+				            "cat": {
+				                "age": 3,
+				                "name": "Sunny"
+				            },
+				            "dog": {
+				                "age": 4,
+				                "name": "Luky"
+				            }
+				        },
+				        "u_salary_1_5_year": 7600
+				    },
+				    "name": "Petro",
+				    "salary": 1900
+				}
+			]
+		},
+		{
+			"name": "endpoint_6",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Kostya",
+							"type": "text"
+						},
+						{
+							"key": "age",
+							"value": "29",
+							"type": "text"
+						},
+						{
+							"key": "salary",
+							"value": "35000",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/user_info_2",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user_info_2"
+					]
+				}
+			},
+			"response": [
+				{
+				    "person": {
+				        "u_age": 29,
+				        "u_name": [
+				            "Kostya",
+				            35000,
+				            29
+				        ],
+				        "u_salary_5_years": 147000.0
+				    },
+				    "qa_salary_after_1.5_year": 115500.0,
+				    "qa_salary_after_12_months": 94500.0,
+				    "qa_salary_after_3.5_years": 133000.0,
+				    "qa_salary_after_6_months": 70000,
+				    "start_qa_salary": 35000
+				}
+			]
+		},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://116.203.27.46:5002"
+		}
+	]
+}
